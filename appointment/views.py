@@ -8,7 +8,7 @@ from .models import Appointment, Consultation
 
 
 def create_appointment(request):
-    if not request.user.is_authenticated():
+    if not request.user.is_authenticated:
         return render(request, 'appointment/login.html')
     else:
         form = AppointmentForm(request.POST or None, request.FILES or None)
@@ -69,7 +69,7 @@ def delete_consultation(request, appointment_id, consultation_id):
 
 
 def detail(request, appointment_id):
-    if not request.user.is_authenticated():
+    if not request.user.is_authenticated:
         return render(request, 'appointment/login.html')
     else:
         user = request.user
@@ -106,7 +106,7 @@ def favorite_appointment(request, appointment_id):
 
 
 def index(request):
-    if not request.user.is_authenticated():
+    if not request.user.is_authenticated:
         return render(request, 'appointment/login.html')
     else:
         appointments = Appointment.objects.filter(user=request.user)
@@ -175,7 +175,7 @@ def register(request):
 
 
 def consultations(request, filter_by):
-    if not request.user.is_authenticated():
+    if not request.user.is_authenticated:
         return render(request, 'appointment/login.html')
     else:
         try:
