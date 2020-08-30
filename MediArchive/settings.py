@@ -31,9 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'surgery.apps.SurgeryConfig',
-    'doctor.apps.DoctorConfig',
-    'lab.apps.LabConfig',
+   # 'surgery.apps.SurgeryConfig',
+   # 'doctor.apps.DoctorConfig',
+    #'lab.apps.LabConfig',
     'appointment.apps.AppointmentConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -43,15 +43,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
-MIDDLEWARE_CLASSES = [
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+MIDDLEWARE = [
+'django.middleware.security.SecurityMiddleware',
+'django.contrib.sessions.middleware.SessionMiddleware',
+'django.middleware.common.CommonMiddleware',
+'django.middleware.csrf.CsrfViewMiddleware',
+'django.contrib.auth.middleware.AuthenticationMiddleware',
+'django.contrib.messages.middleware.MessageMiddleware',
+'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
 ROOT_URLCONF = 'MediArchive.urls'

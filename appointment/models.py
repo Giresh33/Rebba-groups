@@ -3,7 +3,7 @@ from django.contrib.auth.models import Permission, User
 
 # Create your models here.
 class Appointment(models.Model):
-    user = models.ForeignKey(User, default=1)
+    user = models.ForeignKey(User,on_delete=models.CASCADE, default=1)
     date = models.CharField(max_length=20)
     patient_name = models.CharField(max_length=250)
     doctor = models.CharField(max_length=250)

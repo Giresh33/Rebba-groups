@@ -21,11 +21,11 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^appointment/', include('appointment.urls')),
     url(r'^', include('appointment.urls')),
-    url(r'^lab/', include('lab.urls')),
-    url(r'^', include('lab.urls')),
-    url(r'^surgery/', include('surgery.urls')),
-    url(r'^', include('surgery.urls')),
-    url(r'^doctor/', include('doctor.urls')),
-    url(r'^', include('doctor.urls')),
+    #url(r'^lab/', include('lab.urls')),
+    #url(r'^', include('lab.urls')),
+    #url(r'^surgery/', include('surgery.urls')),
+    #url(r'^', include('surgery.urls')),
+    #url(r'^doctor/', include('doctor.urls')),
+    #url(r'^', include('doctor.urls')),
 
 ]
